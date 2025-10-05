@@ -682,22 +682,54 @@ export default function App() {
           </Text>
         </View>
 
-        {/* ===== SKILLS ===== */}
-        <View style={[styles.section, styles.skillsSection]}>
-          <Animatable.Text animation="fadeInUp" style={styles.sectionTitle}>
-            My <Text style={styles.highlight}>Skills</Text>
-          </Animatable.Text>
-          <View style={styles.skillsRow}>
-            <SkillCircle name="Python" percentage={90} delay={100} />
-            <SkillCircle name="Django" percentage={85} delay={200} />
-            <SkillCircle name="React" percentage={80} delay={300} />
-          </View>
-          <View style={styles.skillsRow}>
-            <SkillCircle name="React Native" percentage={75} delay={400} />
-            <SkillCircle name="HTML/CSS/JS" percentage={90} delay={500} />
-            <SkillCircle name="MySQL" percentage={80} delay={600} />
-          </View>
-        </View>
+  {/* ===== SKILLS ===== */}
+{/* ===== SKILLS ===== */}
+<View style={[styles.section, styles.skillsSection]}>
+  <Animatable.Text animation="fadeInUp" style={styles.sectionTitle}>
+    My <Text style={styles.highlight}>Skills</Text>
+  </Animatable.Text>
+
+  {/* Programming Languages */}
+  <Text style={styles.skillCategory}>Programming Languages</Text>
+  <View style={styles.skillsRow}>
+    <SkillCircle name="Python" percentage={90} delay={100} />
+    <SkillCircle name="Java" percentage={80} delay={200} />
+    <SkillCircle name="C++" percentage={75} delay={300} />
+    <SkillCircle name="Dart" percentage={70} delay={400} />
+  </View>
+
+  {/* Web Technologies */}
+  <Text style={styles.skillCategory}>Web Technologies</Text>
+  <View style={styles.skillsRow}>
+    <SkillCircle name="HTML/CSS/JS" percentage={90} delay={500} />
+    <SkillCircle name="jQuery" percentage={80} delay={600} />
+    <SkillCircle name="React" percentage={85} delay={700} />
+    <SkillCircle name="React Native" percentage={75} delay={800} />
+    <SkillCircle name="Django" percentage={85} delay={900} />
+  </View>
+
+  {/* Databases & Version Control */}
+  <Text style={styles.skillCategory}>Databases & Version Control</Text>
+  <View style={styles.skillsRow}>
+    <SkillCircle name="MySQL" percentage={80} delay={1000} />
+    <SkillCircle name="SQLite" percentage={75} delay={1100} />
+    <SkillCircle name="GitHub" percentage={85} delay={1200} />
+  </View>
+
+  {/* Tools, Others & Libraries */}
+  <Text style={styles.skillCategory}>Tools, Others & Libraries</Text>
+  <View style={styles.skillsRow}>
+    <SkillCircle name="Django Framework" percentage={85} delay={1300} />
+    <SkillCircle name="DSA" percentage={80} delay={1400} />
+    <SkillCircle name="AWS (Basics)" percentage={70} delay={1500} />
+    <SkillCircle name="NumPy" percentage={85} delay={1600} />
+    <SkillCircle name="Pandas" percentage={85} delay={1700} />
+    <SkillCircle name="Scikit-learn" percentage={80} delay={1800} />
+    <SkillCircle name="Matplotlib" percentage={75} delay={1900} />
+  </View>
+</View>
+
+
 
         {/* ===== EXPERIENCE ===== */}
         <View style={[styles.section, styles.expSection]}>
@@ -819,23 +851,35 @@ homeSection: { flexDirection: "row" },
   aboutText: { color: "#bbb", textAlign: "center", lineHeight: 22, fontSize: 15 },
 
   // Skills
-  skillsRow: {
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    flexWrap: "wrap",
-    width: "100%",
-  },
+
   skillCircleContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    margin: 15,
-  },
+  alignItems: "center",
+  justifyContent: "center",
+  margin: 10, // reduced margin for more circles in a row
+},
+
   skillTextContainer: {
     position: "absolute",
     alignItems: "center",
   },
   skillPercent: { color: "#00ffee", fontSize: 16, fontWeight: "700" },
   skillLabel: { color: "#fff", fontSize: 13, marginTop: 3 },
+
+skillCategory: {
+  color: "#00ffee",
+  fontSize: 18,
+  fontWeight: "700",
+  marginTop: 25,
+  marginBottom: 10,
+  alignSelf: "flex-start",
+},
+skillsRow: {
+  flexDirection: "row",
+  justifyContent: "space-around",
+  flexWrap: "wrap",
+  width: "100%",
+  marginBottom: 10,
+},
 
   // Experience
   expCard: {
