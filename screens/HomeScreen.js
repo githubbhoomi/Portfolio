@@ -1,15 +1,19 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import profilePic from './images/bhoomi.jpg';
+
 
 export default function HomeScreen() {
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient colors={['#6200EE', '#3700B3']} style={styles.header}>
-        <Image
-          source={{ uri: 'https://i.ibb.co/album-profile.png' }}
+        {/* <Image
+          source={require('./images/bhoomi.jpg')}
           style={styles.avatar}
-        />
+        /> */}
+        <Image source={profilePic} style={styles.avatar} />
+
         <Text style={styles.name}>Bhoomika</Text>
         <Text style={styles.title}>React Native Developer</Text>
       </LinearGradient>
